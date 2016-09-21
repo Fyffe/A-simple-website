@@ -1,0 +1,7 @@
+AddHandler application/x-httpd-php54 .php #nowa_domyslna_wersja_php_proserwer
+DirectoryIndex index.html index.php
+
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
